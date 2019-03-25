@@ -68,3 +68,7 @@ int watch_clear(int fd);
 int idle_add(idle_event_cb_t callback, void *user_data, uint32_t flags,
 		idle_destroy_cb_t destroy);
 void idle_remove(int id);
+
+#ifndef HAVE_EXPLICIT_BZERO
+#define explicit_bzero(payload, len) memset(payload, 0, len)
+#endif

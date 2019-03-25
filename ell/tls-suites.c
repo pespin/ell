@@ -33,6 +33,7 @@
 #include "checksum.h"
 #include "cert.h"
 #include "tls-private.h"
+#include "private.h"
 #include "key.h"
 #include "random.h"
 #include "ecc.h"

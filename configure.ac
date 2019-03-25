@@ -106,6 +106,8 @@ AC_CHECK_FUNC(timerfd_create, dummy=yes,
 AC_CHECK_FUNC(epoll_create, dummy=yes,
 			AC_MSG_ERROR(epoll support is required))
 
+AC_CHECK_FUNCS(explicit_bzero, [AC_DEFINE(HAVE_EXPLICIT_BZERO)])
+
 AC_CHECK_LIB(dl, dlopen, dummy=yes,
 			AC_MSG_ERROR(dynamic linking loader is required))
 
